@@ -52,6 +52,6 @@ public class TestsuitePredictionsGeneratorStrategyFactory {
 
         String className = System.getProperty("testSuite.predictionsGenerator.strategy");
 
-        return (ITestsuitePreditionsGeneratorStrategy) Class.forName("strategyexample.testSuite.TestsuitePredictionsGeneratorStrategy" + className).newInstance();
+        return (ITestsuitePreditionsGeneratorStrategy) Class.forName("strategyexample.testSuite.predictionsGeneratorStrategy.TestsuitePredictionsGeneratorStrategy" + className).newInstance();
     }
 }

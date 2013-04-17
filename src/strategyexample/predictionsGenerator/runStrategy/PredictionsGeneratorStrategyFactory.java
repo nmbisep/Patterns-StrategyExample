@@ -50,6 +50,6 @@ public class PredictionsGeneratorStrategyFactory {
 
         String className = System.getProperty("predictionsGenerator.strategy");
 
-        return (IPredictionsGeneratorStrategy) Class.forName("strategyexample.predictionsGenerator.PredictionsGeneratorStrategy" + className).newInstance();
+        return (IPredictionsGeneratorStrategy) Class.forName("strategyexample.predictionsGenerator.runStrategy.PredictionsGeneratorStrategy" + className).newInstance();
     }
 }

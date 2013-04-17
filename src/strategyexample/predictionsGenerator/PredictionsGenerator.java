@@ -7,6 +7,8 @@ package strategyexample.predictionsGenerator;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
+import strategyexample.predictionsGenerator.runStrategy.IPredictionsGeneratorStrategy;
+import strategyexample.predictionsGenerator.runStrategy.PredictionsGeneratorStrategyFactory;
 
 /**
  *
@@ -37,11 +39,11 @@ public class PredictionsGenerator {
 
     public void run() throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
         //método que era executado quando não existiam estratégias
-        System.out.println(System.getProperty("teste"));
+        //System.out.println(System.getProperty("teste"));
 
         //Para usar a estratégia, apenas é necessário alterar nos ficheiros de propriedades correspondesntes a chave "predictionsGenerator.strategy" para Properties ou HashMap
-        //IPredictionsGeneratorStrategy predictionsGeneratorStrategy = (IPredictionsGeneratorStrategy) PredictionsGeneratorStrategyFactory.getInstance().getPredictionsGeneratorStrategy();
-        //predictionsGeneratorStrategy.run(this);
+        IPredictionsGeneratorStrategy predictionsGeneratorStrategy = (IPredictionsGeneratorStrategy) PredictionsGeneratorStrategyFactory.getInstance().getPredictionsGeneratorStrategy();
+        predictionsGeneratorStrategy.run(this);
 
     }
 }
